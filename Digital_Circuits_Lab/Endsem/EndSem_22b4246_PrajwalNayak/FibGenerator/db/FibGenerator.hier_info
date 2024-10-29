@@ -1,0 +1,1397 @@
+|FibGenerator
+Clk => Clock_Divider:CLOCK_DIV.Clk_50
+Reset => INVERTER:INV1.A
+Reset => TwoToOneMultiplexer:MUX_F1.S
+Reset => TwoToOneMultiplexer:MUX_F2.S
+Reset => TwoToOneMultiplexer:GNN_F1:1:MUX_F1.S
+Reset => TwoToOneMultiplexer:GNN_F1:1:MUX_F2.S
+Reset => TwoToOneMultiplexer:GNN_F1:2:MUX_F1.S
+Reset => TwoToOneMultiplexer:GNN_F1:2:MUX_F2.S
+Reset => TwoToOneMultiplexer:GNN_F1:3:MUX_F1.S
+Reset => TwoToOneMultiplexer:GNN_F1:3:MUX_F2.S
+Reset => TwoToOneMultiplexer:GNN_F1:4:MUX_F1.S
+Reset => TwoToOneMultiplexer:GNN_F1:4:MUX_F2.S
+Reset => TwoToOneMultiplexer:GNN_F1:5:MUX_F1.S
+Reset => TwoToOneMultiplexer:GNN_F1:5:MUX_F2.S
+Seq_out[0] <= Register6bit:R_A.data_out[0]
+Seq_out[1] <= Register6bit:R_A.data_out[1]
+Seq_out[2] <= Register6bit:R_A.data_out[2]
+Seq_out[3] <= Register6bit:R_A.data_out[3]
+Seq_out[4] <= Register6bit:R_A.data_out[4]
+Seq_out[5] <= Register6bit:R_A.data_out[5]
+
+
+|FibGenerator|Clock_Divider:CLOCK_DIV
+Clk_50 => \CLKDIV:outp.CLK
+Clk_50 => \CLKDIV:count[0].CLK
+Clk_50 => \CLKDIV:count[1].CLK
+Clk_50 => \CLKDIV:count[2].CLK
+Clk_50 => \CLKDIV:count[3].CLK
+Clk_50 => \CLKDIV:count[4].CLK
+Clk_50 => \CLKDIV:count[5].CLK
+Clk_50 => \CLKDIV:count[6].CLK
+Clk_50 => \CLKDIV:count[7].CLK
+Clk_50 => \CLKDIV:count[8].CLK
+Clk_50 => \CLKDIV:count[9].CLK
+Clk_50 => \CLKDIV:count[10].CLK
+Clk_50 => \CLKDIV:count[11].CLK
+Clk_50 => \CLKDIV:count[12].CLK
+Clk_50 => \CLKDIV:count[13].CLK
+Clk_50 => \CLKDIV:count[14].CLK
+Clk_50 => \CLKDIV:count[15].CLK
+Clk_50 => \CLKDIV:count[16].CLK
+Clk_50 => \CLKDIV:count[17].CLK
+Clk_50 => \CLKDIV:count[18].CLK
+Clk_50 => \CLKDIV:count[19].CLK
+Clk_50 => \CLKDIV:count[20].CLK
+Clk_50 => \CLKDIV:count[21].CLK
+Clk_50 => \CLKDIV:count[22].CLK
+Clk_50 => \CLKDIV:count[23].CLK
+Clk_50 => \CLKDIV:count[24].CLK
+Clk_50 => \CLKDIV:count[25].CLK
+Clk_50 => \CLKDIV:count[26].CLK
+Clk_50 => \CLKDIV:count[27].CLK
+Clk_50 => \CLKDIV:count[28].CLK
+Clk_50 => \CLKDIV:count[29].CLK
+Clk_50 => \CLKDIV:count[30].CLK
+Clk_50 => \CLKDIV:count[31].CLK
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => count.OUTPUTSELECT
+Reset => outp.OUTPUTSELECT
+Clk_Out <= \CLKDIV:outp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1
+A[0] => FULL_ADDER:FULLADDER0.A
+A[1] => FULL_ADDER:GNN_A:1:FULLADDER_K.A
+A[2] => FULL_ADDER:GNN_A:2:FULLADDER_K.A
+A[3] => FULL_ADDER:GNN_A:3:FULLADDER_K.A
+A[4] => FULL_ADDER:GNN_A:4:FULLADDER_K.A
+A[5] => FULL_ADDER:FULLADDER5.A
+B[0] => FULL_ADDER:FULLADDER0.B
+B[1] => FULL_ADDER:GNN_A:1:FULLADDER_K.B
+B[2] => FULL_ADDER:GNN_A:2:FULLADDER_K.B
+B[3] => FULL_ADDER:GNN_A:3:FULLADDER_K.B
+B[4] => FULL_ADDER:GNN_A:4:FULLADDER_K.B
+B[5] => FULL_ADDER:FULLADDER5.B
+S[0] <= FULL_ADDER:FULLADDER0.S
+S[1] <= FULL_ADDER:GNN_A:1:FULLADDER_K.S
+S[2] <= FULL_ADDER:GNN_A:2:FULLADDER_K.S
+S[3] <= FULL_ADDER:GNN_A:3:FULLADDER_K.S
+S[4] <= FULL_ADDER:GNN_A:4:FULLADDER_K.S
+S[5] <= FULL_ADDER:FULLADDER5.S
+Cout <= FULL_ADDER:FULLADDER5.Cout
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:FULLADDER0
+A => XOR_2:XOR1.A
+A => OR_2:OR1.A
+A => AND_2:AND2.B
+B => XOR_2:XOR1.B
+B => OR_2:OR1.B
+B => AND_2:AND2.A
+Cin => XOR_2:XOR2.B
+Cin => AND_2:AND1.A
+S <= XOR_2:XOR2.Y
+Cout <= OR_2:OR2.Y
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:FULLADDER0|XOR_2:XOR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:FULLADDER0|XOR_2:XOR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:FULLADDER0|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:FULLADDER0|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:FULLADDER0|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:FULLADDER0|OR_2:OR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:1:FULLADDER_K
+A => XOR_2:XOR1.A
+A => OR_2:OR1.A
+A => AND_2:AND2.B
+B => XOR_2:XOR1.B
+B => OR_2:OR1.B
+B => AND_2:AND2.A
+Cin => XOR_2:XOR2.B
+Cin => AND_2:AND1.A
+S <= XOR_2:XOR2.Y
+Cout <= OR_2:OR2.Y
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:1:FULLADDER_K|XOR_2:XOR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:1:FULLADDER_K|XOR_2:XOR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:1:FULLADDER_K|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:1:FULLADDER_K|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:1:FULLADDER_K|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:1:FULLADDER_K|OR_2:OR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:2:FULLADDER_K
+A => XOR_2:XOR1.A
+A => OR_2:OR1.A
+A => AND_2:AND2.B
+B => XOR_2:XOR1.B
+B => OR_2:OR1.B
+B => AND_2:AND2.A
+Cin => XOR_2:XOR2.B
+Cin => AND_2:AND1.A
+S <= XOR_2:XOR2.Y
+Cout <= OR_2:OR2.Y
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:2:FULLADDER_K|XOR_2:XOR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:2:FULLADDER_K|XOR_2:XOR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:2:FULLADDER_K|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:2:FULLADDER_K|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:2:FULLADDER_K|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:2:FULLADDER_K|OR_2:OR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:3:FULLADDER_K
+A => XOR_2:XOR1.A
+A => OR_2:OR1.A
+A => AND_2:AND2.B
+B => XOR_2:XOR1.B
+B => OR_2:OR1.B
+B => AND_2:AND2.A
+Cin => XOR_2:XOR2.B
+Cin => AND_2:AND1.A
+S <= XOR_2:XOR2.Y
+Cout <= OR_2:OR2.Y
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:3:FULLADDER_K|XOR_2:XOR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:3:FULLADDER_K|XOR_2:XOR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:3:FULLADDER_K|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:3:FULLADDER_K|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:3:FULLADDER_K|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:3:FULLADDER_K|OR_2:OR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:4:FULLADDER_K
+A => XOR_2:XOR1.A
+A => OR_2:OR1.A
+A => AND_2:AND2.B
+B => XOR_2:XOR1.B
+B => OR_2:OR1.B
+B => AND_2:AND2.A
+Cin => XOR_2:XOR2.B
+Cin => AND_2:AND1.A
+S <= XOR_2:XOR2.Y
+Cout <= OR_2:OR2.Y
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:4:FULLADDER_K|XOR_2:XOR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:4:FULLADDER_K|XOR_2:XOR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:4:FULLADDER_K|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:4:FULLADDER_K|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:4:FULLADDER_K|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:\GNN_A:4:FULLADDER_K|OR_2:OR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:FULLADDER5
+A => XOR_2:XOR1.A
+A => OR_2:OR1.A
+A => AND_2:AND2.B
+B => XOR_2:XOR1.B
+B => OR_2:OR1.B
+B => AND_2:AND2.A
+Cin => XOR_2:XOR2.B
+Cin => AND_2:AND1.A
+S <= XOR_2:XOR2.Y
+Cout <= OR_2:OR2.Y
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:FULLADDER5|XOR_2:XOR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:FULLADDER5|XOR_2:XOR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:FULLADDER5|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:FULLADDER5|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:FULLADDER5|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|SIX_BIT_ADDER:SIX_BIT_ADDER_1|FULL_ADDER:FULLADDER5|OR_2:OR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|INVERTER:INV2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A
+Clk => DFF_JK:GNN:0:DFF_R.clock
+Clk => DFF_JK:GNN:1:DFF_R.clock
+Clk => DFF_JK:GNN:2:DFF_R.clock
+Clk => DFF_JK:GNN:3:DFF_R.clock
+Clk => DFF_JK:GNN:4:DFF_R.clock
+Clk => DFF_JK:GNN:5:DFF_R.clock
+Reset => NOR_2:GNN:0:NOR_1.A
+Reset => NOR_2:GNN:1:NOR_1.A
+Reset => NOR_2:GNN:2:NOR_1.A
+Reset => NOR_2:GNN:3:NOR_1.A
+Reset => NOR_2:GNN:4:NOR_1.A
+Reset => NOR_2:GNN:5:NOR_1.A
+data_in[0] => DFF_JK:GNN:0:DFF_R.D
+data_in[1] => DFF_JK:GNN:1:DFF_R.D
+data_in[2] => DFF_JK:GNN:2:DFF_R.D
+data_in[3] => DFF_JK:GNN:3:DFF_R.D
+data_in[4] => DFF_JK:GNN:4:DFF_R.D
+data_in[5] => DFF_JK:GNN:5:DFF_R.D
+data_out[0] <= NOR_2:GNN:0:NOR_1.Y
+data_out[1] <= NOR_2:GNN:1:NOR_1.Y
+data_out[2] <= NOR_2:GNN:2:NOR_1.Y
+data_out[3] <= NOR_2:GNN:3:NOR_1.Y
+data_out[4] <= NOR_2:GNN:4:NOR_1.Y
+data_out[5] <= NOR_2:GNN:5:NOR_1.Y
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:0:DFF_R
+D => INVERTER:INV1.A
+D => J_KFF:JKFF_2.J
+clock => J_KFF:JKFF_2.clock
+enable => J_KFF:JKFF_2.enable
+preset => J_KFF:JKFF_2.preset
+reset => J_KFF:JKFF_2.reset
+reset => INVERTER:INV3.A
+Q <= J_KFF:JKFF_2.Q
+QBAR <= INVERTER:INV2.Y
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:0:DFF_R|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:0:DFF_R|J_KFF:JKFF_2
+clock => temp.CLK
+J => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+enable => temp.ENA
+preset => temp.PRESET
+preset => temp.IN0
+reset => temp.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+QBAR <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:0:DFF_R|INVERTER:INV3
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:0:DFF_R|INVERTER:INV2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|NOR_2:\GNN:0:NOR_1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:1:DFF_R
+D => INVERTER:INV1.A
+D => J_KFF:JKFF_2.J
+clock => J_KFF:JKFF_2.clock
+enable => J_KFF:JKFF_2.enable
+preset => J_KFF:JKFF_2.preset
+reset => J_KFF:JKFF_2.reset
+reset => INVERTER:INV3.A
+Q <= J_KFF:JKFF_2.Q
+QBAR <= INVERTER:INV2.Y
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:1:DFF_R|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:1:DFF_R|J_KFF:JKFF_2
+clock => temp.CLK
+J => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+enable => temp.ENA
+preset => temp.PRESET
+preset => temp.IN0
+reset => temp.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+QBAR <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:1:DFF_R|INVERTER:INV3
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:1:DFF_R|INVERTER:INV2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|NOR_2:\GNN:1:NOR_1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:2:DFF_R
+D => INVERTER:INV1.A
+D => J_KFF:JKFF_2.J
+clock => J_KFF:JKFF_2.clock
+enable => J_KFF:JKFF_2.enable
+preset => J_KFF:JKFF_2.preset
+reset => J_KFF:JKFF_2.reset
+reset => INVERTER:INV3.A
+Q <= J_KFF:JKFF_2.Q
+QBAR <= INVERTER:INV2.Y
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:2:DFF_R|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:2:DFF_R|J_KFF:JKFF_2
+clock => temp.CLK
+J => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+enable => temp.ENA
+preset => temp.PRESET
+preset => temp.IN0
+reset => temp.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+QBAR <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:2:DFF_R|INVERTER:INV3
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:2:DFF_R|INVERTER:INV2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|NOR_2:\GNN:2:NOR_1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:3:DFF_R
+D => INVERTER:INV1.A
+D => J_KFF:JKFF_2.J
+clock => J_KFF:JKFF_2.clock
+enable => J_KFF:JKFF_2.enable
+preset => J_KFF:JKFF_2.preset
+reset => J_KFF:JKFF_2.reset
+reset => INVERTER:INV3.A
+Q <= J_KFF:JKFF_2.Q
+QBAR <= INVERTER:INV2.Y
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:3:DFF_R|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:3:DFF_R|J_KFF:JKFF_2
+clock => temp.CLK
+J => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+enable => temp.ENA
+preset => temp.PRESET
+preset => temp.IN0
+reset => temp.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+QBAR <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:3:DFF_R|INVERTER:INV3
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:3:DFF_R|INVERTER:INV2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|NOR_2:\GNN:3:NOR_1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:4:DFF_R
+D => INVERTER:INV1.A
+D => J_KFF:JKFF_2.J
+clock => J_KFF:JKFF_2.clock
+enable => J_KFF:JKFF_2.enable
+preset => J_KFF:JKFF_2.preset
+reset => J_KFF:JKFF_2.reset
+reset => INVERTER:INV3.A
+Q <= J_KFF:JKFF_2.Q
+QBAR <= INVERTER:INV2.Y
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:4:DFF_R|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:4:DFF_R|J_KFF:JKFF_2
+clock => temp.CLK
+J => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+enable => temp.ENA
+preset => temp.PRESET
+preset => temp.IN0
+reset => temp.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+QBAR <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:4:DFF_R|INVERTER:INV3
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:4:DFF_R|INVERTER:INV2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|NOR_2:\GNN:4:NOR_1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:5:DFF_R
+D => INVERTER:INV1.A
+D => J_KFF:JKFF_2.J
+clock => J_KFF:JKFF_2.clock
+enable => J_KFF:JKFF_2.enable
+preset => J_KFF:JKFF_2.preset
+reset => J_KFF:JKFF_2.reset
+reset => INVERTER:INV3.A
+Q <= J_KFF:JKFF_2.Q
+QBAR <= INVERTER:INV2.Y
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:5:DFF_R|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:5:DFF_R|J_KFF:JKFF_2
+clock => temp.CLK
+J => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+enable => temp.ENA
+preset => temp.PRESET
+preset => temp.IN0
+reset => temp.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+QBAR <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:5:DFF_R|INVERTER:INV3
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|DFF_JK:\GNN:5:DFF_R|INVERTER:INV2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_A|NOR_2:\GNN:5:NOR_1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B
+Clk => DFF_JK:GNN:0:DFF_R.clock
+Clk => DFF_JK:GNN:1:DFF_R.clock
+Clk => DFF_JK:GNN:2:DFF_R.clock
+Clk => DFF_JK:GNN:3:DFF_R.clock
+Clk => DFF_JK:GNN:4:DFF_R.clock
+Clk => DFF_JK:GNN:5:DFF_R.clock
+Reset => NOR_2:GNN:0:NOR_1.A
+Reset => NOR_2:GNN:1:NOR_1.A
+Reset => NOR_2:GNN:2:NOR_1.A
+Reset => NOR_2:GNN:3:NOR_1.A
+Reset => NOR_2:GNN:4:NOR_1.A
+Reset => NOR_2:GNN:5:NOR_1.A
+data_in[0] => DFF_JK:GNN:0:DFF_R.D
+data_in[1] => DFF_JK:GNN:1:DFF_R.D
+data_in[2] => DFF_JK:GNN:2:DFF_R.D
+data_in[3] => DFF_JK:GNN:3:DFF_R.D
+data_in[4] => DFF_JK:GNN:4:DFF_R.D
+data_in[5] => DFF_JK:GNN:5:DFF_R.D
+data_out[0] <= NOR_2:GNN:0:NOR_1.Y
+data_out[1] <= NOR_2:GNN:1:NOR_1.Y
+data_out[2] <= NOR_2:GNN:2:NOR_1.Y
+data_out[3] <= NOR_2:GNN:3:NOR_1.Y
+data_out[4] <= NOR_2:GNN:4:NOR_1.Y
+data_out[5] <= NOR_2:GNN:5:NOR_1.Y
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:0:DFF_R
+D => INVERTER:INV1.A
+D => J_KFF:JKFF_2.J
+clock => J_KFF:JKFF_2.clock
+enable => J_KFF:JKFF_2.enable
+preset => J_KFF:JKFF_2.preset
+reset => J_KFF:JKFF_2.reset
+reset => INVERTER:INV3.A
+Q <= J_KFF:JKFF_2.Q
+QBAR <= INVERTER:INV2.Y
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:0:DFF_R|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:0:DFF_R|J_KFF:JKFF_2
+clock => temp.CLK
+J => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+enable => temp.ENA
+preset => temp.PRESET
+preset => temp.IN0
+reset => temp.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+QBAR <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:0:DFF_R|INVERTER:INV3
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:0:DFF_R|INVERTER:INV2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|NOR_2:\GNN:0:NOR_1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:1:DFF_R
+D => INVERTER:INV1.A
+D => J_KFF:JKFF_2.J
+clock => J_KFF:JKFF_2.clock
+enable => J_KFF:JKFF_2.enable
+preset => J_KFF:JKFF_2.preset
+reset => J_KFF:JKFF_2.reset
+reset => INVERTER:INV3.A
+Q <= J_KFF:JKFF_2.Q
+QBAR <= INVERTER:INV2.Y
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:1:DFF_R|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:1:DFF_R|J_KFF:JKFF_2
+clock => temp.CLK
+J => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+enable => temp.ENA
+preset => temp.PRESET
+preset => temp.IN0
+reset => temp.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+QBAR <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:1:DFF_R|INVERTER:INV3
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:1:DFF_R|INVERTER:INV2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|NOR_2:\GNN:1:NOR_1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:2:DFF_R
+D => INVERTER:INV1.A
+D => J_KFF:JKFF_2.J
+clock => J_KFF:JKFF_2.clock
+enable => J_KFF:JKFF_2.enable
+preset => J_KFF:JKFF_2.preset
+reset => J_KFF:JKFF_2.reset
+reset => INVERTER:INV3.A
+Q <= J_KFF:JKFF_2.Q
+QBAR <= INVERTER:INV2.Y
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:2:DFF_R|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:2:DFF_R|J_KFF:JKFF_2
+clock => temp.CLK
+J => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+enable => temp.ENA
+preset => temp.PRESET
+preset => temp.IN0
+reset => temp.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+QBAR <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:2:DFF_R|INVERTER:INV3
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:2:DFF_R|INVERTER:INV2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|NOR_2:\GNN:2:NOR_1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:3:DFF_R
+D => INVERTER:INV1.A
+D => J_KFF:JKFF_2.J
+clock => J_KFF:JKFF_2.clock
+enable => J_KFF:JKFF_2.enable
+preset => J_KFF:JKFF_2.preset
+reset => J_KFF:JKFF_2.reset
+reset => INVERTER:INV3.A
+Q <= J_KFF:JKFF_2.Q
+QBAR <= INVERTER:INV2.Y
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:3:DFF_R|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:3:DFF_R|J_KFF:JKFF_2
+clock => temp.CLK
+J => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+enable => temp.ENA
+preset => temp.PRESET
+preset => temp.IN0
+reset => temp.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+QBAR <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:3:DFF_R|INVERTER:INV3
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:3:DFF_R|INVERTER:INV2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|NOR_2:\GNN:3:NOR_1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:4:DFF_R
+D => INVERTER:INV1.A
+D => J_KFF:JKFF_2.J
+clock => J_KFF:JKFF_2.clock
+enable => J_KFF:JKFF_2.enable
+preset => J_KFF:JKFF_2.preset
+reset => J_KFF:JKFF_2.reset
+reset => INVERTER:INV3.A
+Q <= J_KFF:JKFF_2.Q
+QBAR <= INVERTER:INV2.Y
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:4:DFF_R|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:4:DFF_R|J_KFF:JKFF_2
+clock => temp.CLK
+J => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+enable => temp.ENA
+preset => temp.PRESET
+preset => temp.IN0
+reset => temp.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+QBAR <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:4:DFF_R|INVERTER:INV3
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:4:DFF_R|INVERTER:INV2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|NOR_2:\GNN:4:NOR_1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:5:DFF_R
+D => INVERTER:INV1.A
+D => J_KFF:JKFF_2.J
+clock => J_KFF:JKFF_2.clock
+enable => J_KFF:JKFF_2.enable
+preset => J_KFF:JKFF_2.preset
+reset => J_KFF:JKFF_2.reset
+reset => INVERTER:INV3.A
+Q <= J_KFF:JKFF_2.Q
+QBAR <= INVERTER:INV2.Y
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:5:DFF_R|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:5:DFF_R|J_KFF:JKFF_2
+clock => temp.CLK
+J => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+enable => temp.ENA
+preset => temp.PRESET
+preset => temp.IN0
+reset => temp.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+QBAR <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:5:DFF_R|INVERTER:INV3
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|DFF_JK:\GNN:5:DFF_R|INVERTER:INV2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|Register6bit:R_B|NOR_2:\GNN:5:NOR_1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:MUX_F1
+I1 => AND_2:AND1.A
+I0 => AND_2:AND2.A
+S => INVERTER:NOT1.A
+S => AND_2:AND1.B
+Y <= OR_2:OR1.Y
+
+
+|FibGenerator|TwoToOneMultiplexer:MUX_F1|INVERTER:NOT1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:MUX_F1|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:MUX_F1|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:MUX_F1|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:MUX_F2
+I1 => AND_2:AND1.A
+I0 => AND_2:AND2.A
+S => INVERTER:NOT1.A
+S => AND_2:AND1.B
+Y <= OR_2:OR1.Y
+
+
+|FibGenerator|TwoToOneMultiplexer:MUX_F2|INVERTER:NOT1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:MUX_F2|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:MUX_F2|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:MUX_F2|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:1:MUX_F1
+I1 => AND_2:AND1.A
+I0 => AND_2:AND2.A
+S => INVERTER:NOT1.A
+S => AND_2:AND1.B
+Y <= OR_2:OR1.Y
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:1:MUX_F1|INVERTER:NOT1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:1:MUX_F1|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:1:MUX_F1|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:1:MUX_F1|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:1:MUX_F2
+I1 => AND_2:AND1.A
+I0 => AND_2:AND2.A
+S => INVERTER:NOT1.A
+S => AND_2:AND1.B
+Y <= OR_2:OR1.Y
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:1:MUX_F2|INVERTER:NOT1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:1:MUX_F2|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:1:MUX_F2|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:1:MUX_F2|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:2:MUX_F1
+I1 => AND_2:AND1.A
+I0 => AND_2:AND2.A
+S => INVERTER:NOT1.A
+S => AND_2:AND1.B
+Y <= OR_2:OR1.Y
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:2:MUX_F1|INVERTER:NOT1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:2:MUX_F1|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:2:MUX_F1|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:2:MUX_F1|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:2:MUX_F2
+I1 => AND_2:AND1.A
+I0 => AND_2:AND2.A
+S => INVERTER:NOT1.A
+S => AND_2:AND1.B
+Y <= OR_2:OR1.Y
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:2:MUX_F2|INVERTER:NOT1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:2:MUX_F2|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:2:MUX_F2|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:2:MUX_F2|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:3:MUX_F1
+I1 => AND_2:AND1.A
+I0 => AND_2:AND2.A
+S => INVERTER:NOT1.A
+S => AND_2:AND1.B
+Y <= OR_2:OR1.Y
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:3:MUX_F1|INVERTER:NOT1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:3:MUX_F1|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:3:MUX_F1|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:3:MUX_F1|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:3:MUX_F2
+I1 => AND_2:AND1.A
+I0 => AND_2:AND2.A
+S => INVERTER:NOT1.A
+S => AND_2:AND1.B
+Y <= OR_2:OR1.Y
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:3:MUX_F2|INVERTER:NOT1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:3:MUX_F2|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:3:MUX_F2|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:3:MUX_F2|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:4:MUX_F1
+I1 => AND_2:AND1.A
+I0 => AND_2:AND2.A
+S => INVERTER:NOT1.A
+S => AND_2:AND1.B
+Y <= OR_2:OR1.Y
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:4:MUX_F1|INVERTER:NOT1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:4:MUX_F1|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:4:MUX_F1|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:4:MUX_F1|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:4:MUX_F2
+I1 => AND_2:AND1.A
+I0 => AND_2:AND2.A
+S => INVERTER:NOT1.A
+S => AND_2:AND1.B
+Y <= OR_2:OR1.Y
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:4:MUX_F2|INVERTER:NOT1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:4:MUX_F2|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:4:MUX_F2|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:4:MUX_F2|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:5:MUX_F1
+I1 => AND_2:AND1.A
+I0 => AND_2:AND2.A
+S => INVERTER:NOT1.A
+S => AND_2:AND1.B
+Y <= OR_2:OR1.Y
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:5:MUX_F1|INVERTER:NOT1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:5:MUX_F1|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:5:MUX_F1|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:5:MUX_F1|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:5:MUX_F2
+I1 => AND_2:AND1.A
+I0 => AND_2:AND2.A
+S => INVERTER:NOT1.A
+S => AND_2:AND1.B
+Y <= OR_2:OR1.Y
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:5:MUX_F2|INVERTER:NOT1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:5:MUX_F2|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:5:MUX_F2|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FibGenerator|TwoToOneMultiplexer:\GNN_F1:5:MUX_F2|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,41 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Seq_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Seq_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Seq_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Seq_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Seq_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Seq_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "Clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

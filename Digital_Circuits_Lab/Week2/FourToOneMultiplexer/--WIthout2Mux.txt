@@ -1,0 +1,21 @@
+NOT1: INVERTER port map(A=> S1, Y=> S1_BAR);
+	
+	NOT2: INVERTER port map(A=> S2, Y=> S2_BAR);
+
+	AND1: AND_2 port map (A=> I1, B=> S1_BAR, Y=> I1_AND_S1_BAR);
+	
+	AND2: AND_2 port map (A=> I2, B=> S1, Y=> I2_AND_S1);
+	
+	AND3: AND_2 port map (A=> I3, B=> S1_BAR, Y=> I3_AND_S1_BAR);
+	
+	AND4: AND_2 port map (A=> I4, B=> S1, Y=> I4_AND_S1);
+	
+	AND5: AND_2 port map (A=> I1_AND_S1_BAR, B=> S2_BAR, Y=> IS_I1);
+	
+	AND6: AND_2 port map (A=> I2_AND_S1, B=> S2, Y=> IS_I2);
+
+	AND7: AND_2 port map (A=> I3_AND_S1_BAR, B=> S2_BAR, Y=> IS_I1);
+	
+	AND8: AND_2 port map (A=> I2_AND_S1, B=> S2, Y=> IS_I2);
+	
+	OR1: OR_2 port map (A=> I1_AND_S, B=> I2_AND_S_BAR, Y=> Y);

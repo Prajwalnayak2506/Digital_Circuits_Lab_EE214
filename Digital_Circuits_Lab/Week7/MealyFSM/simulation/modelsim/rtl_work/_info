@@ -1,0 +1,351 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Acer/Documents/EE214/Week7/MealyFSM/simulation/modelsim
+Ebroomfsm
+Z1 w1696584278
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 7
+R0
+Z5 8C:/Users/Acer/Documents/EE214/Week7/MealyFSM/broomFSM.vhd
+Z6 FC:/Users/Acer/Documents/EE214/Week7/MealyFSM/broomFSM.vhd
+l0
+L5 1
+VfFAGVH;K_<bK^04l:0;Zd2
+!s100 IzEn8DY8=6:>IJh@84IY12
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1696585412
+!i10b 1
+Z9 !s108 1696585412.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Acer/Documents/EE214/Week7/MealyFSM/broomFSM.vhd|
+Z11 !s107 C:/Users/Acer/Documents/EE214/Week7/MealyFSM/broomFSM.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abhv3
+R2
+R3
+R4
+DEx4 work 8 broomfsm 0 22 fFAGVH;K_<bK^04l:0;Zd2
+!i122 7
+l19
+L12 69
+VT^TFg@7@fK>YB>C[VAIo43
+!s100 274fj<hkFmDjEJbYJV=T>2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ecryfsm
+Z14 w1696584176
+R2
+R3
+R4
+!i122 6
+R0
+Z15 8C:/Users/Acer/Documents/EE214/Week7/MealyFSM/cryFSM.vhd
+Z16 FC:/Users/Acer/Documents/EE214/Week7/MealyFSM/cryFSM.vhd
+l0
+L5 1
+V`bYLM9VWTTzlo=FLGRATi2
+!s100 @F46z=obhe`ljBBU<^kj=2
+R7
+31
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Acer/Documents/EE214/Week7/MealyFSM/cryFSM.vhd|
+Z18 !s107 C:/Users/Acer/Documents/EE214/Week7/MealyFSM/cryFSM.vhd|
+!i113 1
+R12
+R13
+Abhv2
+R2
+R3
+R4
+DEx4 work 6 cryfsm 0 22 `bYLM9VWTTzlo=FLGRATi2
+!i122 6
+l19
+Z19 L12 53
+VH3dR:_ne[NDeXe[KHc>=^2
+!s100 D0oYG@acG:hF6N:1A<j@33
+R7
+31
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Edut
+Z20 w1696583613
+R3
+R4
+!i122 4
+R0
+Z21 8C:/Users/Acer/Documents/EE214/Week7/MealyFSM/DUT.vhdl
+Z22 FC:/Users/Acer/Documents/EE214/Week7/MealyFSM/DUT.vhdl
+l0
+L8 1
+V`4fAS?oXNaeiX0Od1>KI>1
+!s100 ^K550@PYeFF0865cPkI011
+R7
+31
+R8
+!i10b 1
+R9
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/Acer/Documents/EE214/Week7/MealyFSM/DUT.vhdl|
+Z24 !s107 C:/Users/Acer/Documents/EE214/Week7/MealyFSM/DUT.vhdl|
+!i113 1
+R12
+R13
+Adutwrap
+R3
+R4
+DEx4 work 3 dut 0 22 `4fAS?oXNaeiX0Od1>KI>1
+!i122 4
+l20
+L13 15
+V6h;9ng^YTT5=YblojLDLZ3
+!s100 LjjB:m:eF8Clb3RgndRoO2
+R7
+31
+R8
+!i10b 1
+R9
+R23
+R24
+!i113 1
+R12
+R13
+Emealyfsm
+Z25 w1696584115
+R2
+R3
+R4
+!i122 3
+R0
+Z26 8C:/Users/Acer/Documents/EE214/Week7/MealyFSM/MealyFSM.vhd
+Z27 FC:/Users/Acer/Documents/EE214/Week7/MealyFSM/MealyFSM.vhd
+l0
+L5 1
+V9UM3GWf5_?A>ck[I84S_L0
+!s100 3FD[h:o9]T60YI44=`an23
+R7
+31
+Z28 !s110 1696585411
+!i10b 1
+Z29 !s108 1696585411.000000
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/Acer/Documents/EE214/Week7/MealyFSM/MealyFSM.vhd|
+Z31 !s107 C:/Users/Acer/Documents/EE214/Week7/MealyFSM/MealyFSM.vhd|
+!i113 1
+R12
+R13
+Abhv
+R2
+R3
+R4
+DEx4 work 8 mealyfsm 0 22 9UM3GWf5_?A>ck[I84S_L0
+!i122 3
+l36
+L12 31
+VF6A21:SS[iM;ZK>`?Rllc1
+!s100 ^_ih^YT1ch[PjG[FHa@DE1
+R7
+31
+R28
+!i10b 1
+R29
+R30
+R31
+!i113 1
+R12
+R13
+Erunfsm
+Z32 w1696583115
+R2
+R3
+R4
+!i122 5
+R0
+Z33 8C:/Users/Acer/Documents/EE214/Week7/MealyFSM/runFSM.vhd
+Z34 FC:/Users/Acer/Documents/EE214/Week7/MealyFSM/runFSM.vhd
+l0
+L5 1
+VoQZO;i<8QdhMR<FS_ZU5_1
+!s100 n40@?01>O7O[`fJg]@DcE3
+R7
+31
+R8
+!i10b 1
+R9
+Z35 !s90 -reportprogress|300|-93|-work|work|C:/Users/Acer/Documents/EE214/Week7/MealyFSM/runFSM.vhd|
+Z36 !s107 C:/Users/Acer/Documents/EE214/Week7/MealyFSM/runFSM.vhd|
+!i113 1
+R12
+R13
+Abhv
+R2
+R3
+R4
+DEx4 work 6 runfsm 0 22 oQZO;i<8QdhMR<FS_ZU5_1
+!i122 5
+l19
+R19
+V8DMCkKMTQZPE@]c<n9J2R1
+!s100 HCUB00>P0S5Y6Z:f8`M>z3
+R7
+31
+R8
+!i10b 1
+R9
+R35
+R36
+!i113 1
+R12
+R13
+Etestbench
+Z37 w1696395104
+R4
+R3
+!i122 8
+R0
+Z38 8C:/Users/Acer/Documents/EE214/Week7/MealyFSM/Testbench.vhdl
+Z39 FC:/Users/Acer/Documents/EE214/Week7/MealyFSM/Testbench.vhdl
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R7
+31
+R8
+!i10b 1
+R9
+Z40 !s90 -reportprogress|300|-93|-work|work|C:/Users/Acer/Documents/EE214/Week7/MealyFSM/Testbench.vhdl|
+!s107 C:/Users/Acer/Documents/EE214/Week7/MealyFSM/Testbench.vhdl|
+!i113 1
+R12
+R13
+Abehave
+R4
+R3
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 8
+l69
+L9 132
+VJz7UL?QCBkGiCUoiC4F<n2
+!s100 9cY4BDB:PK]N4zXBR1FgD3
+R7
+31
+R8
+!i10b 1
+R9
+R40
+Z41 !s107 C:/Users/Acer/Documents/EE214/Week7/MealyFSM/Testbench.vhdl|
+!i113 1
+R12
+R13
+Etoplevel
+Z42 w1696584816
+R2
+R3
+R4
+!i122 2
+R0
+Z43 8C:/Users/Acer/Documents/EE214/Week7/MealyFSM/TopLevel.vhdl
+Z44 FC:/Users/Acer/Documents/EE214/Week7/MealyFSM/TopLevel.vhdl
+l0
+L5 1
+VRW=hg7X2^>c3bX1h9KmmK0
+!s100 gJ^gg3F;Qe=>jcbTR:JjO3
+R7
+31
+R28
+!i10b 1
+R29
+Z45 !s90 -reportprogress|300|-93|-work|work|C:/Users/Acer/Documents/EE214/Week7/MealyFSM/TopLevel.vhdl|
+Z46 !s107 C:/Users/Acer/Documents/EE214/Week7/MealyFSM/TopLevel.vhdl|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 8 toplevel 0 22 RW=hg7X2^>c3bX1h9KmmK0
+!i122 2
+l75
+L13 146
+VI@GgZiZHNPXNM[3HOAcgh3
+!s100 :DkVc]MOQ=akL_O^kYB^L2
+R7
+31
+R28
+!i10b 1
+R29
+R45
+R46
+!i113 1
+R12
+R13
+Ev_jtag
+Z47 w1694169030
+R2
+R3
+R4
+!i122 1
+R0
+Z48 8C:/Users/Acer/Documents/EE214/Week7/MealyFSM/v_jtag/synthesis/v_jtag.vhd
+Z49 FC:/Users/Acer/Documents/EE214/Week7/MealyFSM/v_jtag/synthesis/v_jtag.vhd
+l0
+L9 1
+VK7J:B[m3^:cB1Km[I3N602
+!s100 C:GMYKMFIUkIMaKNS>ek<2
+R7
+31
+R28
+!i10b 1
+R29
+Z50 !s90 -reportprogress|300|-93|-work|work|C:/Users/Acer/Documents/EE214/Week7/MealyFSM/v_jtag/synthesis/v_jtag.vhd|
+Z51 !s107 C:/Users/Acer/Documents/EE214/Week7/MealyFSM/v_jtag/synthesis/v_jtag.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+DEx4 work 6 v_jtag 0 22 K7J:B[m3^:cB1Km[I3N602
+!i122 1
+l85
+L44 83
+VJODH=ZQLe0=R51Pn2gWGM3
+!s100 QN^;ea;8E9NBL5]J::=Mk2
+R7
+31
+R28
+!i10b 1
+R29
+R50
+R51
+!i113 1
+R12
+R13

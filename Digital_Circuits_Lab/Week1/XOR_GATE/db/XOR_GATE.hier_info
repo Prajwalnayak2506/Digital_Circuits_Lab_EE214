@@ -1,0 +1,46 @@
+|DUT
+input_vector[0] => XOR_GATE:add_instance.Q
+input_vector[1] => XOR_GATE:add_instance.P
+output_vector[0] <= XOR_GATE:add_instance.OUTPUT
+
+
+|DUT|XOR_GATE:add_instance
+P => NOR_2:NOR1.A
+P => NOR_2:NOR1.B
+P => NOR_2:NOR4.A
+Q => NOR_2:NOR2.A
+Q => NOR_2:NOR2.B
+Q => NOR_2:NOR4.B
+OUTPUT <= NOR_2:NOR5.Y
+
+
+|DUT|XOR_GATE:add_instance|NOR_2:NOR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|XOR_GATE:add_instance|NOR_2:NOR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|XOR_GATE:add_instance|NOR_2:NOR3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|XOR_GATE:add_instance|NOR_2:NOR4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|XOR_GATE:add_instance|NOR_2:NOR5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

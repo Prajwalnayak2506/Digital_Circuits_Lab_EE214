@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity FibGenerator is
+	port(Clk, Reset : std_logic;
+	Seq_out : std_logic_vector(5 downto 0));
+end entity;
+
+architecture BHV of FibGenerator is 
+	component SIX_BIT_ADDER is
+		port (A,B: in std_logic_vector(5 downto 0); S: out std_logic_vector(5 downto 0); Cout: out std_logic);
+	end component SIX_BIT_ADDER;
+begin
+
+end BHV;

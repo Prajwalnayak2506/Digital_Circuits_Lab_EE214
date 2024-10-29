@@ -1,0 +1,26 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+library work;
+use work.Gates.all;
+
+entity HALF_ADDER is
+	port (P,Q: in std_logic; BORROW,DIFFERENCE: out std_logic);
+end entity HALF_ADDER;
+
+architecture Structure of HALF_ADDER is
+	signal BORROW, P_Q_BAR, P_NOR_Q, NOT_DIFFERENCE : std_logic;
+	-- BORROW == P_BAR_Q
+begin
+	NOR1: NOR_2 port map (A => P, B => Q, Y=> P_NOR_Q);
+	
+	NOR2: NOR_2 port map (A => P, B => P_NOR_Q, Y=> BORROW);
+	
+	
+	NOR3: NOR_2 port map (A => P_NOR_Q, B => Q, Y=> P_Q_BAR);
+	
+	NOR4: NOR_2 port map (A => BORROW, B => P_Q_BAR, Y=> NOT_DIFFERENCE);
+	
+	NOR5: NOR_2 port map (A => NOT_DIFFERENCE, B => NOT_DIFFERENCE, Y=> DIFFERENCE);
+	
+	end architecture;

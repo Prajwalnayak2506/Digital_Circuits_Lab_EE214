@@ -1,0 +1,89 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+
+library work;
+use work.Gates.all;
+
+
+entity ALU1 is 
+	port ( A : in std_logic_vector(3 downto 0); B: in std_logic_vector(3 downto 0); S1, S2 : in std_logic; OP: out std_logic_vector(3 downto 0));
+end entity ALU1;
+
+
+
+
+
+architecture Struct of ALU1 is
+	signal : std_logic;
+begin
+	function AandB(A : in std_logic_vector(3 downto 0); B: in std_logic_vector(3 downto 0))
+	return std_logic_vector is 
+		variable BandA : std_logic_vector(3 downto 0);
+	begin
+		L1: for i in 0 to 3 loop
+				BandA(i) = A(i) and B(i)
+			end loop L1;
+		return BandA;
+	end AandB;
+
+	function NOTA(A : in std_logic_vector(3 downto 0))
+	return std_logic_vector is 
+		variable Anot : std_logic_vector(3 downto 0);
+	begin
+		L2: for j in 0 to 3 loop
+				Anot(j) = not A(j)
+			end loop L2;
+		return Anot;
+	end NOTA;
+
+	function EQCHECK(A : in std_logic_vector(3 downto 0); B: in std_logic_vector(3 downto 0))
+	signal P : std_logic
+	return std_logic_vector is 
+		variable NUM : std_logic_vector(3 downto 0);
+	begin
+		P := '0'
+		L3: for k in 0 to 3 loop
+				if A(k) = B(k) then
+					NUM(k) := A(k);
+				else
+					P := 1;
+				end if;
+		end loop L3;
+		if P = '1' then
+			NUM := '0000'
+		
+		return NUM;
+	end EQCHECK;
+
+	function MAXCQ(A : in std_logic_vector(3 downto 0); B: in std_logic_vector(3 downto 0))
+	signal Q,R : std_logic;
+	return std_logic_vector is 
+		variable MAXIMUM : std_logic_vector(3 downto 0);
+	begin
+		R := '0'
+		L4: for l in 0 to (3) loop
+			if R = '0' then
+				if A(3-l) xor B(3-l) = '1' then
+					if A(3-l) = '1' then
+						R := '1'
+						Q := '1'
+					else
+						R := '1'
+						Q := '0'
+					end if
+				end if
+			end if
+		end loop L4;
+		if Q='1':
+			MAXIMUM := A
+		else
+			MAXIMUM := B
+		end if 
+		return MAXIMUM;
+	end MAXCQ;
+	
+	
+
+end architecture;

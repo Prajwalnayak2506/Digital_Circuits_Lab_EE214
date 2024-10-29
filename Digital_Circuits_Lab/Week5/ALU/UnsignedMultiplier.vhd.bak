@@ -1,0 +1,48 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+use work.FULL_ADDER.all;
+
+
+entity UnsignedMultiplier is 
+	port ( A: in std_logic_vector(3 downto 0); B: in std_logic_vector(2 downto 0); M: out std_logic_vector(6 downto 0));
+end entity UnsignedMultiplier;
+
+architecture Struct of UnsignedMultiplier is
+	signal A1B0,A2B0,A3B0,A0B1,A1B1,A2B1,A3B1,A0B2,A1B2,A2B2,A3B2, C1, C2, C_2, C3, C_3, C4, C_4, O1, O2, O3: std_logic;
+begin
+	
+	AND1: AND_2 port map (A => A(0), B=> B(0), Y => M(0));
+	AND2: AND_2 port map (A => A(1), B=> B(0), Y => A1B0);
+	AND3: AND_2 port map (A => A(2), B=> B(0), Y => A2B0);
+	AND4: AND_2 port map (A => A(3), B=> B(0), Y => A3B0);
+	
+	AND5: AND_2 port map (A => A(0), B=> B(1), Y => A0B1);
+	AND6: AND_2 port map (A => A(1), B=> B(1), Y => A1B1);
+	AND7: AND_2 port map (A => A(2), B=> B(1), Y => A2B1);
+	AND8: AND_2 port map (A => A(3), B=> B(1), Y => A3B1);
+	
+	AND9: AND_2 port map (A => A(0), B=> B(2), Y => A0B2);
+	AND10: AND_2 port map (A => A(1), B=> B(2), Y => A1B2);
+	AND11: AND_2 port map (A => A(2), B=> B(2), Y => A2B2);
+	AND12: AND_2 port map (A => A(3), B=> B(2), Y => A3B2);
+	
+	HALFADD1: HALF_ADDER port map (A=>A1B0 ,B=> A0B1, S=>M(1), C=> C1 );
+	
+	FULLADDER1: FULLADDER port map(A=>C1 , B=>A2B0, Cin=>A1B1, S=> O1, Cout=> C2);
+	HALFADD2: HALF_ADDER port map (A=>O1 ,B=> A0B2, S=>M(2), C=> C_2 );
+	
+	FULLADDER2: FULLADDER port map(A=>C2 , B=>C_2, Cin=>A3B0, S=> O2, Cout=> C3);
+	FULLADDER3: FULLADDER port map(A=>O2 , B=>A2B1, Cin=>A1B2, S=> M(3), Cout=> C_3);
+	FULLADDER4: FULLADDER port map(A=>C3 ,B=>A3B1, Cin=>C_3, S=> O3, Cout=> C4);
+	HALFADD3: HALF_ADDER port map (A=>O3 ,B=> A2B2, S=>M(4), C=> C_4 );
+	
+	FULLADDER5: FULLADDER port map(A=>C4 ,B=>A3B2, Cin=>C_4, S=> M(5), Cout=> M(6));
+	
+
+end architecture;

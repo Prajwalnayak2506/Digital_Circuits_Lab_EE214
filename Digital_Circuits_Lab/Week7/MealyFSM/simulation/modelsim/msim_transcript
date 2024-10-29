@@ -1,0 +1,151 @@
+# Reading pref.tcl
+# do MealyFSM_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Acer/Documents/EE214/Week7/MealyFSM/v_jtag/synthesis/v_jtag.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:13:30 on Oct 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Acer/Documents/EE214/Week7/MealyFSM/v_jtag/synthesis/v_jtag.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity v_jtag
+# -- Compiling architecture rtl of v_jtag
+# End time: 15:13:31 on Oct 06,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Acer/Documents/EE214/Week7/MealyFSM/v_jtag/synthesis/v_jtag.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:13:31 on Oct 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Acer/Documents/EE214/Week7/MealyFSM/v_jtag/synthesis/v_jtag.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity v_jtag
+# -- Compiling architecture rtl of v_jtag
+# End time: 15:13:31 on Oct 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Acer/Documents/EE214/Week7/MealyFSM/TopLevel.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:13:31 on Oct 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Acer/Documents/EE214/Week7/MealyFSM/TopLevel.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity TopLevel
+# -- Compiling architecture Struct of TopLevel
+# ** Warning: C:/Users/Acer/Documents/EE214/Week7/MealyFSM/TopLevel.vhdl(99): (vcom-1246) Range 0 downto 1 is null.
+# End time: 15:13:31 on Oct 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vcom -93 -work work {C:/Users/Acer/Documents/EE214/Week7/MealyFSM/MealyFSM.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:13:31 on Oct 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Acer/Documents/EE214/Week7/MealyFSM/MealyFSM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity MealyFSM
+# -- Compiling architecture bhv of MealyFSM
+# End time: 15:13:31 on Oct 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Acer/Documents/EE214/Week7/MealyFSM/DUT.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:13:32 on Oct 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Acer/Documents/EE214/Week7/MealyFSM/DUT.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DUT
+# -- Compiling architecture DutWrap of DUT
+# End time: 15:13:32 on Oct 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Acer/Documents/EE214/Week7/MealyFSM/runFSM.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:13:32 on Oct 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Acer/Documents/EE214/Week7/MealyFSM/runFSM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity runFSM
+# -- Compiling architecture bhv of runFSM
+# End time: 15:13:32 on Oct 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Acer/Documents/EE214/Week7/MealyFSM/cryFSM.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:13:32 on Oct 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Acer/Documents/EE214/Week7/MealyFSM/cryFSM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cryFSM
+# -- Compiling architecture bhv2 of cryFSM
+# End time: 15:13:32 on Oct 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Acer/Documents/EE214/Week7/MealyFSM/broomFSM.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:13:32 on Oct 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Acer/Documents/EE214/Week7/MealyFSM/broomFSM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity broomFSM
+# -- Compiling architecture bhv3 of broomFSM
+# End time: 15:13:32 on Oct 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/Acer/Documents/EE214/Week7/MealyFSM/Testbench.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:13:32 on Oct 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Acer/Documents/EE214/Week7/MealyFSM/Testbench.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench
+# -- Compiling architecture Behave of Testbench
+# End time: 15:13:32 on Oct 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  Testbench
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 15:13:33 on Oct 06,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behave)
+# Loading work.dut(dutwrap)
+# Loading ieee.numeric_std(body)
+# Loading work.mealyfsm(bhv)
+# Loading work.runfsm(bhv)
+# Loading work.cryfsm(bhv2)
+# Loading work.broomfsm(bhv3)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/broomFSM1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/cryFSM1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/runFSM1
+# ** Note: SUCCESS, all tests passed.
+#    Time: 644 ns  Iteration: 0  Instance: /testbench
+# End time: 15:15:41 on Oct 06,2023, Elapsed time: 0:02:08
+# Errors: 0, Warnings: 3

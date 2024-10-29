@@ -1,0 +1,82 @@
+|DUT
+input_vector[0] => Fibonacci_Detector:add_instance.x0
+input_vector[1] => Fibonacci_Detector:add_instance.x1
+input_vector[2] => Fibonacci_Detector:add_instance.x2
+input_vector[3] => Fibonacci_Detector:add_instance.x3
+input_vector[4] => Fibonacci_Detector:add_instance.x4
+output_vector[0] << Fibonacci_Detector:add_instance.y
+
+
+|DUT|Fibonacci_Detector:add_instance
+x0 => OR_2:OR1.B
+x0 => AND_2:AND2.B
+x1 => INVERTER:NOT1.A
+x1 => OR_2:OR1.A
+x2 => NOR_2:NOR1.B
+x2 => AND_2:AND2.A
+x3 => NAND_2:NAND1.A
+x3 => NAND_2:NAND2.B
+x4 => NOR_2:NOR1.A
+x4 => NAND_2:NAND2.A
+y <= OR_2:OR2.Y
+
+
+|DUT|Fibonacci_Detector:add_instance|INVERTER:NOT1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Fibonacci_Detector:add_instance|NOR_2:NOR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Fibonacci_Detector:add_instance|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Fibonacci_Detector:add_instance|NAND_2:NAND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Fibonacci_Detector:add_instance|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Fibonacci_Detector:add_instance|NAND_2:NAND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Fibonacci_Detector:add_instance|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Fibonacci_Detector:add_instance|AND_2:AND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Fibonacci_Detector:add_instance|AND_2:AND4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Fibonacci_Detector:add_instance|OR_2:OR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

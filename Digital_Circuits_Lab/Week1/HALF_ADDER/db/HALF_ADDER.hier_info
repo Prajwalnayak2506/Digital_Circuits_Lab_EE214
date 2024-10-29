@@ -1,0 +1,53 @@
+|DUT
+input_vector[0] => HALF_SUBTRACTOR_1:add_instance.Q
+input_vector[1] => HALF_SUBTRACTOR_1:add_instance.P
+output_vector[0] <= HALF_SUBTRACTOR_1:add_instance.BORROW
+output_vector[1] <= HALF_SUBTRACTOR_1:add_instance.DIFFERENCE
+
+
+|DUT|HALF_SUBTRACTOR_1:add_instance
+P => NOR_2:NOR1.A
+P => NOR_2:NOR2.A
+P => NOR_2:NOR3.A
+Q => NOR_2:NOR1.B
+Q => NOR_2:NOR4.B
+BORROW <= NOR_2:NOR2.Y
+DIFFERENCE <= NOR_2:NOR6.Y
+
+
+|DUT|HALF_SUBTRACTOR_1:add_instance|NOR_2:NOR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|HALF_SUBTRACTOR_1:add_instance|NOR_2:NOR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|HALF_SUBTRACTOR_1:add_instance|NOR_2:NOR3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|HALF_SUBTRACTOR_1:add_instance|NOR_2:NOR4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|HALF_SUBTRACTOR_1:add_instance|NOR_2:NOR5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|HALF_SUBTRACTOR_1:add_instance|NOR_2:NOR6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

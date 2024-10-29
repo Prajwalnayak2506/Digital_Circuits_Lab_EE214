@@ -1,0 +1,267 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Acer/Documents/EE214/Week8/ClockDivider/simulation/modelsim
+Edut
+Z1 w1697188465
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+R0
+Z4 8C:/Users/Acer/Documents/EE214/Week8/ClockDivider/DUT.vhdl
+Z5 FC:/Users/Acer/Documents/EE214/Week8/ClockDivider/DUT.vhdl
+l0
+L7 1
+V91;X5>j1[Fl;gnP[MfzAR2
+!s100 C5o297M@[mmU7iFM;D:EJ3
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1697197146
+!i10b 1
+Z8 !s108 1697197146.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Acer/Documents/EE214/Week8/ClockDivider/DUT.vhdl|
+Z10 !s107 C:/Users/Acer/Documents/EE214/Week8/ClockDivider/DUT.vhdl|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 91;X5>j1[Fl;gnP[MfzAR2
+!i122 2
+l18
+L12 19
+VJFW:6<EYON2W2EVP_U7hZ1
+!s100 LZnQj:91kaob03QF]Zk852
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eled
+Z13 w1697195471
+Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R2
+R3
+!i122 3
+R0
+Z15 8C:/Users/Acer/Documents/EE214/Week8/ClockDivider/led.vhd
+Z16 FC:/Users/Acer/Documents/EE214/Week8/ClockDivider/led.vhd
+l0
+L5 1
+VZcFgYX2c;7RIGNWMjlWX?2
+!s100 S4MKCa7<iomgEaf`055EI0
+R6
+31
+R7
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Acer/Documents/EE214/Week8/ClockDivider/led.vhd|
+Z18 !s107 C:/Users/Acer/Documents/EE214/Week8/ClockDivider/led.vhd|
+!i113 1
+R11
+R12
+Alight
+R14
+R2
+R3
+DEx4 work 3 led 0 22 ZcFgYX2c;7RIGNWMjlWX?2
+!i122 3
+l26
+L10 56
+VU<dYVCLGb1^;R`R`Oc9]V2
+!s100 ;SR9XXPHI>ob]:IofAJHV0
+R6
+31
+R7
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R11
+R12
+Etestbench
+Z19 w1697195948
+R14
+R2
+R3
+!i122 5
+R0
+Z20 8C:/Users/Acer/Documents/EE214/Week8/ClockDivider/Testbench.vhdl
+Z21 FC:/Users/Acer/Documents/EE214/Week8/ClockDivider/Testbench.vhdl
+l0
+L5 1
+VSJ7L24U^Oign[n2<LGBKo3
+!s100 aGm8WZa?IH8[DCf6`zC;o2
+R6
+31
+R7
+!i10b 1
+R8
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/Acer/Documents/EE214/Week8/ClockDivider/Testbench.vhdl|
+!s107 C:/Users/Acer/Documents/EE214/Week8/ClockDivider/Testbench.vhdl|
+!i113 1
+R11
+R12
+Abehave
+R14
+R2
+R3
+DEx4 work 9 testbench 0 22 SJ7L24U^Oign[n2<LGBKo3
+!i122 5
+l18
+L7 20
+V2WN]AoHlMm2JdB=G;<C>10
+!s100 z_o4AS2X8`YNgJFfBZIML2
+R6
+31
+R7
+!i10b 1
+R8
+R22
+Z23 !s107 C:/Users/Acer/Documents/EE214/Week8/ClockDivider/Testbench.vhdl|
+!i113 1
+R11
+R12
+Etoplevel
+Z24 w1697195598
+R14
+R2
+R3
+!i122 1
+R0
+Z25 8C:/Users/Acer/Documents/EE214/Week8/ClockDivider/TopLevel.vhdl
+Z26 FC:/Users/Acer/Documents/EE214/Week8/ClockDivider/TopLevel.vhdl
+l0
+L5 1
+VRW=hg7X2^>c3bX1h9KmmK0
+!s100 gJ^gg3F;Qe=>jcbTR:JjO3
+R6
+31
+R7
+!i10b 1
+R8
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/Acer/Documents/EE214/Week8/ClockDivider/TopLevel.vhdl|
+Z28 !s107 C:/Users/Acer/Documents/EE214/Week8/ClockDivider/TopLevel.vhdl|
+!i113 1
+R11
+R12
+Astruct
+R14
+R2
+R3
+DEx4 work 8 toplevel 0 22 RW=hg7X2^>c3bX1h9KmmK0
+!i122 1
+l75
+L13 146
+VUj`:HR7B4Y`Oe8MQXenC]2
+!s100 YAzR2?TIi5]KOA]j>_6]W2
+R6
+31
+R7
+!i10b 1
+R8
+R27
+R28
+!i113 1
+R11
+R12
+Etwohertzclock
+Z29 w1697197005
+R14
+R2
+R3
+!i122 4
+R0
+Z30 8C:/Users/Acer/Documents/EE214/Week8/ClockDivider/TwoHertzClock.vhd
+Z31 FC:/Users/Acer/Documents/EE214/Week8/ClockDivider/TwoHertzClock.vhd
+l0
+L5 1
+VIe7IckkM8>_1I`EVYIB?H1
+!s100 ;0C`WMdIGhbf:OHB=PR5f0
+R6
+31
+R7
+!i10b 1
+R8
+Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/Acer/Documents/EE214/Week8/ClockDivider/TwoHertzClock.vhd|
+Z33 !s107 C:/Users/Acer/Documents/EE214/Week8/ClockDivider/TwoHertzClock.vhd|
+!i113 1
+R11
+R12
+Abhv
+R14
+R2
+R3
+DEx4 work 13 twohertzclock 0 22 Ie7IckkM8>_1I`EVYIB?H1
+!i122 4
+l15
+L11 22
+VkJ9Oz?8MUM`W=@OT[WTo[0
+!s100 J:PK6C@5n^PCVZV^N<0jY2
+R6
+31
+R7
+!i10b 1
+R8
+R32
+R33
+!i113 1
+R11
+R12
+Ev_jtag
+Z34 w1694169030
+R14
+R2
+R3
+!i122 0
+R0
+Z35 8C:/Users/Acer/Documents/EE214/Week8/ClockDivider/v_jtag.vhd
+Z36 FC:/Users/Acer/Documents/EE214/Week8/ClockDivider/v_jtag.vhd
+l0
+L9 1
+VK7J:B[m3^:cB1Km[I3N602
+!s100 C:GMYKMFIUkIMaKNS>ek<2
+R6
+31
+R7
+!i10b 1
+R8
+Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/Acer/Documents/EE214/Week8/ClockDivider/v_jtag.vhd|
+Z38 !s107 C:/Users/Acer/Documents/EE214/Week8/ClockDivider/v_jtag.vhd|
+!i113 1
+R11
+R12
+Artl
+R14
+R2
+R3
+DEx4 work 6 v_jtag 0 22 K7J:B[m3^:cB1Km[I3N602
+!i122 0
+l85
+L44 83
+VJODH=ZQLe0=R51Pn2gWGM3
+!s100 QN^;ea;8E9NBL5]J::=Mk2
+R6
+31
+R7
+!i10b 1
+R8
+R37
+R38
+!i113 1
+R11
+R12

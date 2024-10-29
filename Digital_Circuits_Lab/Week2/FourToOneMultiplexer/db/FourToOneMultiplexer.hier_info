@@ -1,0 +1,114 @@
+|DUT
+input_vector[0] => FourToOneMultiplexer:add_instance.S1
+input_vector[1] => FourToOneMultiplexer:add_instance.S2
+input_vector[2] => FourToOneMultiplexer:add_instance.I1
+input_vector[3] => FourToOneMultiplexer:add_instance.I2
+input_vector[4] => FourToOneMultiplexer:add_instance.I3
+input_vector[5] => FourToOneMultiplexer:add_instance.I4
+output_vector[0] << FourToOneMultiplexer:add_instance.Y
+
+
+|DUT|FourToOneMultiplexer:add_instance
+I4 => TwoToOneMultiplexer:mux2x1_1.I1
+I3 => TwoToOneMultiplexer:mux2x1_1.I0
+I2 => TwoToOneMultiplexer:mux2x1_2.I1
+I1 => TwoToOneMultiplexer:mux2x1_2.I0
+S2 => TwoToOneMultiplexer:mux2x1_3.S
+S1 => TwoToOneMultiplexer:mux2x1_1.S
+S1 => TwoToOneMultiplexer:mux2x1_2.S
+Y <= TwoToOneMultiplexer:mux2x1_3.Y
+
+
+|DUT|FourToOneMultiplexer:add_instance|TwoToOneMultiplexer:mux2x1_1
+I1 => AND_2:AND1.A
+I0 => AND_2:AND2.A
+S => INVERTER:NOT1.A
+S => AND_2:AND1.B
+Y <= OR_2:OR1.Y
+
+
+|DUT|FourToOneMultiplexer:add_instance|TwoToOneMultiplexer:mux2x1_1|INVERTER:NOT1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|FourToOneMultiplexer:add_instance|TwoToOneMultiplexer:mux2x1_1|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|FourToOneMultiplexer:add_instance|TwoToOneMultiplexer:mux2x1_1|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|FourToOneMultiplexer:add_instance|TwoToOneMultiplexer:mux2x1_1|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|FourToOneMultiplexer:add_instance|TwoToOneMultiplexer:mux2x1_2
+I1 => AND_2:AND1.A
+I0 => AND_2:AND2.A
+S => INVERTER:NOT1.A
+S => AND_2:AND1.B
+Y <= OR_2:OR1.Y
+
+
+|DUT|FourToOneMultiplexer:add_instance|TwoToOneMultiplexer:mux2x1_2|INVERTER:NOT1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|FourToOneMultiplexer:add_instance|TwoToOneMultiplexer:mux2x1_2|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|FourToOneMultiplexer:add_instance|TwoToOneMultiplexer:mux2x1_2|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|FourToOneMultiplexer:add_instance|TwoToOneMultiplexer:mux2x1_2|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|FourToOneMultiplexer:add_instance|TwoToOneMultiplexer:mux2x1_3
+I1 => AND_2:AND1.A
+I0 => AND_2:AND2.A
+S => INVERTER:NOT1.A
+S => AND_2:AND1.B
+Y <= OR_2:OR1.Y
+
+
+|DUT|FourToOneMultiplexer:add_instance|TwoToOneMultiplexer:mux2x1_3|INVERTER:NOT1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|FourToOneMultiplexer:add_instance|TwoToOneMultiplexer:mux2x1_3|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|FourToOneMultiplexer:add_instance|TwoToOneMultiplexer:mux2x1_3|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|FourToOneMultiplexer:add_instance|TwoToOneMultiplexer:mux2x1_3|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

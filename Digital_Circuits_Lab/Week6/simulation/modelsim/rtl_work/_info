@@ -1,0 +1,240 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Acer/Documents/EE214/Week6/SequenceGenerator/simulation/modelsim
+Edff_reset
+Z1 w1694770568
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z4 8C:/Users/Acer/Documents/EE214/Week6/SequenceGenerator/FlipFlop.vhd
+Z5 FC:/Users/Acer/Documents/EE214/Week6/SequenceGenerator/FlipFlop.vhd
+l0
+L28 1
+VPMT5mRI8?IW_Mb3E__XGn1
+!s100 NNa30eXK1bdBe8OTSaB1a2
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1694771649
+!i10b 1
+Z8 !s108 1694771649.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Acer/Documents/EE214/Week6/SequenceGenerator/FlipFlop.vhd|
+Z10 !s107 C:/Users/Acer/Documents/EE214/Week6/SequenceGenerator/FlipFlop.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehav
+R2
+R3
+DEx4 work 9 dff_reset 0 22 PMT5mRI8?IW_Mb3E__XGn1
+!i122 1
+l31
+L30 11
+VNBY[gk_g@KbT88QhjS`n23
+!s100 MdGeQg]JSiP8ZCX[WV>R71
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edff_set
+R1
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L12 1
+VI7DzG20f69S8K1fA`G0CI2
+!s100 GnnLbz`I_3fSDYm_FkV193
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehav
+R2
+R3
+DEx4 work 7 dff_set 0 22 I7DzG20f69S8K1fA`G0CI2
+!i122 1
+l15
+L14 11
+VJcM5bhHkRFIL8?P[9mlEa2
+!s100 9=6ZRD3FFcoa7MjHW?;h41
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edut
+Z13 w1694770800
+R2
+R3
+!i122 0
+R0
+Z14 8C:/Users/Acer/Documents/EE214/Week6/SequenceGenerator/DUT.vhdl
+Z15 FC:/Users/Acer/Documents/EE214/Week6/SequenceGenerator/DUT.vhdl
+l0
+L8 1
+VJ?bme`[eJ1S?MK`^R]k=;2
+!s100 bR0lkKMnI3U4_2`SX3bH22
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/Acer/Documents/EE214/Week6/SequenceGenerator/DUT.vhdl|
+Z17 !s107 C:/Users/Acer/Documents/EE214/Week6/SequenceGenerator/DUT.vhdl|
+!i113 1
+R11
+R12
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 J?bme`[eJ1S?MK`^R]k=;2
+!i122 0
+l18
+L13 13
+V[l=?O4JNJL00THj921@g^0
+!s100 bDZN9izA1:^n4c0;UiQGL0
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Pflipflops
+R2
+R3
+!i122 1
+R1
+R0
+R4
+R5
+l0
+L3 1
+V<B[@b31IaHo;^iHaN2:Cm0
+!s100 DOe:b7AGBQTBz1c5JgcHM3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Esequence_generator_stru_dataflow
+Z18 w1694771635
+Z19 DPx4 work 9 flipflops 0 22 <B[@b31IaHo;^iHaN2:Cm0
+R2
+R3
+!i122 2
+R0
+Z20 8C:/Users/Acer/Documents/EE214/Week6/SequenceGenerator/SequenceGenerator.vhd
+Z21 FC:/Users/Acer/Documents/EE214/Week6/SequenceGenerator/SequenceGenerator.vhd
+l0
+L9 1
+Vg^jAf5aBc>0F13WL^4`:M1
+!s100 T8K@_X9RkB;en^ij>XT=H3
+R6
+31
+R7
+!i10b 1
+R8
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/Acer/Documents/EE214/Week6/SequenceGenerator/SequenceGenerator.vhd|
+Z23 !s107 C:/Users/Acer/Documents/EE214/Week6/SequenceGenerator/SequenceGenerator.vhd|
+!i113 1
+R11
+R12
+Astruct
+R19
+R2
+R3
+DEx4 work 32 sequence_generator_stru_dataflow 0 22 g^jAf5aBc>0F13WL^4`:M1
+!i122 2
+l17
+L13 22
+VMWRnfFNkM8kZOZW_?kSi23
+!s100 Nn0MJRNo^DL0ZdfUkV:0N1
+R6
+31
+R7
+!i10b 1
+R8
+R22
+R23
+!i113 1
+R11
+R12
+Etestbench
+Z24 w1694770701
+R3
+R2
+!i122 3
+R0
+Z25 8C:/Users/Acer/Documents/EE214/Week6/SequenceGenerator/Testbench.vhdl
+Z26 FC:/Users/Acer/Documents/EE214/Week6/SequenceGenerator/Testbench.vhdl
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R7
+!i10b 1
+R8
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/Acer/Documents/EE214/Week6/SequenceGenerator/Testbench.vhdl|
+!s107 C:/Users/Acer/Documents/EE214/Week6/SequenceGenerator/Testbench.vhdl|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 3
+l69
+L9 132
+Vf3hR06N2RGUODQcza;L>I3
+!s100 dD0YcHLNVK^T<[OGFHoM12
+R6
+31
+R7
+!i10b 1
+R8
+R27
+Z28 !s107 C:/Users/Acer/Documents/EE214/Week6/SequenceGenerator/Testbench.vhdl|
+!i113 1
+R11
+R12

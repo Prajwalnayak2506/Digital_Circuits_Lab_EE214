@@ -1,0 +1,44 @@
+|DUT
+input_vector[0] => HalfHertzClock:add_instance.reset
+input_vector[1] => HalfHertzClock:add_instance.inputclock
+output_vector[0] <= HalfHertzClock:add_instance.outputclock
+
+
+|DUT|HalfHertzClock:add_instance
+inputclock => ~NO_FANOUT~
+reset => count[31].OUTPUTSELECT
+reset => count[30].OUTPUTSELECT
+reset => count[29].OUTPUTSELECT
+reset => count[28].OUTPUTSELECT
+reset => count[27].OUTPUTSELECT
+reset => count[26].OUTPUTSELECT
+reset => count[25].OUTPUTSELECT
+reset => count[24].OUTPUTSELECT
+reset => count[23].OUTPUTSELECT
+reset => count[22].OUTPUTSELECT
+reset => count[21].OUTPUTSELECT
+reset => count[20].OUTPUTSELECT
+reset => count[19].OUTPUTSELECT
+reset => count[18].OUTPUTSELECT
+reset => count[17].OUTPUTSELECT
+reset => count[16].OUTPUTSELECT
+reset => count[15].OUTPUTSELECT
+reset => count[14].OUTPUTSELECT
+reset => count[13].OUTPUTSELECT
+reset => count[12].OUTPUTSELECT
+reset => count[11].OUTPUTSELECT
+reset => count[10].OUTPUTSELECT
+reset => count[9].OUTPUTSELECT
+reset => count[8].OUTPUTSELECT
+reset => count[7].OUTPUTSELECT
+reset => count[6].OUTPUTSELECT
+reset => count[5].OUTPUTSELECT
+reset => count[4].OUTPUTSELECT
+reset => count[3].OUTPUTSELECT
+reset => count[2].OUTPUTSELECT
+reset => count[1].OUTPUTSELECT
+reset => count[0].OUTPUTSELECT
+reset => tempOP.ACLR
+outputclock <= tempOP.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,267 @@
+|Register6bit
+Clk => DFF_JK:GNN:0:DFF_R.clock
+Clk => DFF_JK:GNN:1:DFF_R.clock
+Clk => DFF_JK:GNN:2:DFF_R.clock
+Clk => DFF_JK:GNN:3:DFF_R.clock
+Clk => DFF_JK:GNN:4:DFF_R.clock
+Clk => DFF_JK:GNN:5:DFF_R.clock
+Reset => DFF_JK:GNN:0:DFF_R.reset
+Reset => DFF_JK:GNN:1:DFF_R.reset
+Reset => DFF_JK:GNN:2:DFF_R.reset
+Reset => DFF_JK:GNN:3:DFF_R.reset
+Reset => DFF_JK:GNN:4:DFF_R.reset
+Reset => DFF_JK:GNN:5:DFF_R.reset
+data_in[0] => DFF_JK:GNN:0:DFF_R.D
+data_in[1] => DFF_JK:GNN:1:DFF_R.D
+data_in[2] => DFF_JK:GNN:2:DFF_R.D
+data_in[3] => DFF_JK:GNN:3:DFF_R.D
+data_in[4] => DFF_JK:GNN:4:DFF_R.D
+data_in[5] => DFF_JK:GNN:5:DFF_R.D
+data_out[0] << DFF_JK:GNN:0:DFF_R.Q
+data_out[1] << DFF_JK:GNN:1:DFF_R.Q
+data_out[2] << DFF_JK:GNN:2:DFF_R.Q
+data_out[3] << DFF_JK:GNN:3:DFF_R.Q
+data_out[4] << DFF_JK:GNN:4:DFF_R.Q
+data_out[5] << DFF_JK:GNN:5:DFF_R.Q
+
+
+|Register6bit|DFF_JK:\GNN:0:DFF_R
+D => INVERTER:INV1.A
+D => J_KFF:JKFF_2.J
+clock => J_KFF:JKFF_2.clock
+enable => J_KFF:JKFF_2.enable
+preset => J_KFF:JKFF_2.preset
+reset => J_KFF:JKFF_2.reset
+reset => INVERTER:INV3.A
+Q <= J_KFF:JKFF_2.Q
+QBAR <= INVERTER:INV2.Y
+
+
+|Register6bit|DFF_JK:\GNN:0:DFF_R|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:0:DFF_R|J_KFF:JKFF_2
+clock => temp.CLK
+J => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+enable => temp.ENA
+preset => temp.PRESET
+preset => temp.IN0
+reset => temp.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+QBAR <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:0:DFF_R|INVERTER:INV3
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:0:DFF_R|INVERTER:INV2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:1:DFF_R
+D => INVERTER:INV1.A
+D => J_KFF:JKFF_2.J
+clock => J_KFF:JKFF_2.clock
+enable => J_KFF:JKFF_2.enable
+preset => J_KFF:JKFF_2.preset
+reset => J_KFF:JKFF_2.reset
+reset => INVERTER:INV3.A
+Q <= J_KFF:JKFF_2.Q
+QBAR <= INVERTER:INV2.Y
+
+
+|Register6bit|DFF_JK:\GNN:1:DFF_R|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:1:DFF_R|J_KFF:JKFF_2
+clock => temp.CLK
+J => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+enable => temp.ENA
+preset => temp.PRESET
+preset => temp.IN0
+reset => temp.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+QBAR <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:1:DFF_R|INVERTER:INV3
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:1:DFF_R|INVERTER:INV2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:2:DFF_R
+D => INVERTER:INV1.A
+D => J_KFF:JKFF_2.J
+clock => J_KFF:JKFF_2.clock
+enable => J_KFF:JKFF_2.enable
+preset => J_KFF:JKFF_2.preset
+reset => J_KFF:JKFF_2.reset
+reset => INVERTER:INV3.A
+Q <= J_KFF:JKFF_2.Q
+QBAR <= INVERTER:INV2.Y
+
+
+|Register6bit|DFF_JK:\GNN:2:DFF_R|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:2:DFF_R|J_KFF:JKFF_2
+clock => temp.CLK
+J => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+enable => temp.ENA
+preset => temp.PRESET
+preset => temp.IN0
+reset => temp.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+QBAR <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:2:DFF_R|INVERTER:INV3
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:2:DFF_R|INVERTER:INV2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:3:DFF_R
+D => INVERTER:INV1.A
+D => J_KFF:JKFF_2.J
+clock => J_KFF:JKFF_2.clock
+enable => J_KFF:JKFF_2.enable
+preset => J_KFF:JKFF_2.preset
+reset => J_KFF:JKFF_2.reset
+reset => INVERTER:INV3.A
+Q <= J_KFF:JKFF_2.Q
+QBAR <= INVERTER:INV2.Y
+
+
+|Register6bit|DFF_JK:\GNN:3:DFF_R|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:3:DFF_R|J_KFF:JKFF_2
+clock => temp.CLK
+J => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+enable => temp.ENA
+preset => temp.PRESET
+preset => temp.IN0
+reset => temp.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+QBAR <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:3:DFF_R|INVERTER:INV3
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:3:DFF_R|INVERTER:INV2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:4:DFF_R
+D => INVERTER:INV1.A
+D => J_KFF:JKFF_2.J
+clock => J_KFF:JKFF_2.clock
+enable => J_KFF:JKFF_2.enable
+preset => J_KFF:JKFF_2.preset
+reset => J_KFF:JKFF_2.reset
+reset => INVERTER:INV3.A
+Q <= J_KFF:JKFF_2.Q
+QBAR <= INVERTER:INV2.Y
+
+
+|Register6bit|DFF_JK:\GNN:4:DFF_R|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:4:DFF_R|J_KFF:JKFF_2
+clock => temp.CLK
+J => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+enable => temp.ENA
+preset => temp.PRESET
+preset => temp.IN0
+reset => temp.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+QBAR <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:4:DFF_R|INVERTER:INV3
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:4:DFF_R|INVERTER:INV2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:5:DFF_R
+D => INVERTER:INV1.A
+D => J_KFF:JKFF_2.J
+clock => J_KFF:JKFF_2.clock
+enable => J_KFF:JKFF_2.enable
+preset => J_KFF:JKFF_2.preset
+reset => J_KFF:JKFF_2.reset
+reset => INVERTER:INV3.A
+Q <= J_KFF:JKFF_2.Q
+QBAR <= INVERTER:INV2.Y
+
+
+|Register6bit|DFF_JK:\GNN:5:DFF_R|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:5:DFF_R|J_KFF:JKFF_2
+clock => temp.CLK
+J => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+K => temp.OUTPUTSELECT
+enable => temp.ENA
+preset => temp.PRESET
+preset => temp.IN0
+reset => temp.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+QBAR <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:5:DFF_R|INVERTER:INV3
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register6bit|DFF_JK:\GNN:5:DFF_R|INVERTER:INV2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
